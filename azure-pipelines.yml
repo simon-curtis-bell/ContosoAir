@@ -14,5 +14,9 @@ steps:
 - task: ArchiveFiles@2
   displayName: 'Archive $(Build.SourcesDirectory)'
   inputs:
-    rootFolderOrFile: '$(Build.SourcesDirectory)
+    rootFolderOrFile: '$(Build.SourcesDirectory)'
     includeRootFolder: false
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    ArtifactName: 'Publish Artifact: drop'
